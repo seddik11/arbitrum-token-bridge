@@ -91,7 +91,7 @@ export function TokenButton(): JSX.Element {
         <Popover.Panel
           className={twMerge(
             panelWrapperClassnames,
-            'lg:ml-12 lg:min-w-[466px]'
+            'px-5 py-4 lg:ml-12 lg:min-w-[466px]'
           )}
         >
           {({ close }) => {
@@ -99,11 +99,7 @@ export function TokenButton(): JSX.Element {
               onPopoverClose()
               close()
             }
-            return (
-              <div className="px-5 py-4">
-                <TokenSearch close={onClose} />
-              </div>
-            )
+            return <TokenSearch close={onClose} />
           }}
         </Popover.Panel>
       </Popover>
