@@ -273,18 +273,8 @@ function useTokenInfo(token: ERC20BridgeToken | null) {
 }
 
 function ArbitrumTokenTooltip() {
-  const [networks] = useNetworks()
-  const { childChain, parentChain, isDepositMode } =
-    useNetworksRelationship(networks)
-
-  const networkName = getNetworkName(
-    isDepositMode ? parentChain.id : childChain.id
-  )
-
   return (
-    <Tooltip
-      content={`This is the official Arbitrum token on ${networkName}. Please beware of fake tokens trying to impersonate it.`}
-    >
+    <Tooltip content="This is the official Arbitrum token. Please beware of fake tokens trying to impersonate it.">
       <StatusBadge variant="green" className="text-xs">
         <CheckCircleIcon className="h-4 w-4" />
         <span>Official</span>
@@ -434,7 +424,6 @@ export function TokenRow({
             <span className="text-base font-medium">{tokenSymbol}</span>
             <span className="text-xs text-white/70">{tokenName}</span>
             {isArbitrumToken && <ArbitrumTokenTooltip />}
-
             {isPotentialFakeArbitrumToken && (
               <Tooltip content="This token is different from the official Arbitrum token (ARB).">
                 <div className="box-border flex w-max flex-nowrap items-center gap-1 rounded-full border-[1px] border-gray-dark px-1 py-[2px] pr-2 text-sm">
