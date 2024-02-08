@@ -33,8 +33,11 @@ module.exports = {
         'gray-5': '#AEAEAE',
         'gray-4': '#CCCCCC',
         'gray-6': '#999999',
+        'gray-7': '#BDBDBD',
         'gray-dark': '#6D6D6D',
         dark: '#1A1C1D', // (or default-black)
+
+        'bg-gray-1': '#191919',
 
         // BRAND
         'eth-dark': '#1A1C33',
@@ -52,7 +55,9 @@ module.exports = {
       boxShadow: {
         // shadow used for input fields across the app
         input:
-          '0px 2px 2px rgba(33,37,41,0.06), 0px 0px 1px rgba(33,37,41,0.08)'
+          '0px 2px 2px rgba(33,37,41,0.06), 0px 0px 1px rgba(33,37,41,0.08)',
+        modal:
+          '0px 4px 6px 0px rgba(33, 37, 41, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25)'
       }
     }
   }
